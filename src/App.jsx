@@ -3,8 +3,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 import Onboarding from "./pages/Onboarding";
 import Welcome from "./pages/Welcome";
-import Signup from "./pages/Signup";
-import SignIn from "./pages/Signin";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
 import EmailVerification from "./pages/EmailVerification";
 import ForgotPassword from "./pages/ForgotPassword";
 import TermsAndPrivacy from "./pages/TermsAndPrivacy";
@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Onboarding />} />
         <Route path="/onboarding" element={<Onboarding />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/verify-email" element={<EmailVerification />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -36,3 +36,4 @@ function App() {
 }
 
 export default App;
+s

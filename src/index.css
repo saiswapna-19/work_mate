@@ -1,0 +1,146 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #F0F0F5;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* App layout */
+.app-layout {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Mobile screens */
+.app-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: #FAFAFF;
+  overflow-x: hidden;
+}
+
+/* Tablets, iPad, laptops and desktops */
+@media (min-width: 768px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  #root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .app-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-container {
+    width: 440px;
+    height: min(956px, 100dvh);
+    min-height: min(956px, 100dvh);
+    max-height: 956px;
+    flex: 0 0 auto;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .app-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Terms and privacy scrollbar */
+.terms-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #7950FF #EAE5FF;
+}
+
+.terms-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.terms-scrollbar::-webkit-scrollbar-track {
+  background: #EAE5FF;
+}
+
+.terms-scrollbar::-webkit-scrollbar-thumb {
+  background: #7950FF;
+  border-radius: 10px;
+}
+
+/* Buttons */
+.primary-button,
+.outline-button {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary-button {
+  background: #7950FF;
+  color: white;
+}
+
+.outline-button {
+  border: 1px solid #7950FF;
+  background: white;
+  color: #7950FF;
+}
